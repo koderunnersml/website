@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "coder": "hugo server --bind='0.0.0.0' -p 3000 -b https://3000-dreamflammablegnu.cdr.co --appendPort=false"
+    }
+}

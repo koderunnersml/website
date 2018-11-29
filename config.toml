@@ -1,0 +1,66 @@
+BaseURL = "/"
+theme = "casper-two"
+languageCode    = "en-US"
+disqusShortname = "koderunnersml"
+paginate        = 6
+#SectionPagesMenu = "main"
+
+[params]
+  title = "KoderunnersML"
+  subtitle = "Machine Learning Made Fun"
+
+  cover       = "uploads/koderunners_header.jpg"
+  description = "Koderunners Machine Learning Developers' Pool"
+  metaDescription = "Koderunners Machine Learning Developers' Pool"
+  googleAnalytics = "UA-75993010-2"
+  customCSS = []
+  RSSLink = ""
+
+  twitterName = ""
+  fbName = "koderunners"
+  githubName = "koderunners"
+  youtubeName = ""
+
+  logo = ""
+  orgName = "Koderunners"
+  orgWebsite = "https://github.com/koderunners"
+  orgDescription = "The Koderunners Community"
+
+  author = "KoderunnersML"
+  authorAvatar = "uploads/koderunners.jpg"
+  authorLocation = "Bhubaneshwar, India"
+  authorWebsite = "https://koderunners.wordpress.com/"
+  authorDescription = "Official Machine Learning Developers' Pool of the Koderunners Community"
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+[permalinks]
+  post = "/:slug/"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 200
+
+[[menu.main]]
+  name = "About"
+  url = "/life/-2018-about-us-index-md"
+  weight = 100
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog"
+  weight = 99
+
+[[menu.main]]
+  name = "Admin"
+  url = "/admin"
+  weight = 98
+
+[[menu.main]]
+  name = "Koderunners"
+  url = "https://koderunners.wordpress.com"
+  weight = 98
