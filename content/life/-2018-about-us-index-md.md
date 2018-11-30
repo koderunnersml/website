@@ -7,9 +7,9 @@ tags:
   - machinelearning
 author: KoderunnersML
 authorImage: uploads/koderunners.jpg
-image: /uploads/3.jpg
+image: /uploads/0.jpg
 comments: true
 share: true
 type: post
 ---
-Koderunners About Page
+The Koderunners Community was started on February, 2017 by a group of students passionate about coding and technology.
