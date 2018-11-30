@@ -56,11 +56,16 @@ paginate        = 6
   weight = 99
 
 [[menu.main]]
-  name = "Admin"
-  url = "/admin"
-  weight = 98
+  name = "Machine Learning"
+  url = "/tags/machinelearning"
+  weight = 99
 
 [[menu.main]]
   name = "Koderunners"
   url = "https://koderunners.wordpress.com"
+  weight = 98
+
+[[menu.main]]
+  name = "Admin"
+  url = "/admin"
   weight = 98
