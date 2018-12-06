@@ -14,15 +14,11 @@ comments: true
 share: true
 type: post
 ---
-
-
 ## Image Classification
 
 In Image Classification problems we classify an image to a specific class. The whole image represents one class. We don't want to know exactly where are the object. Usually only one object is presented.
 
 ![Cat](/uploads/cat.3.jpg)
-
-
 
 ## Object Detection
 
@@ -35,3 +31,11 @@ Sometimes we need more information from an image rather than just a predicted cl
 Semantic Segmentation allows us to gather even more information compared to Object Detection. While in Object Detection we usually identify a rectangular region of interest containing a classified object, in Semantic Segmentation we label each pixel in the image with a category label. Semantic Segmentation doesn't differentiate instances, it only cares about individual pixels.
 
 ![](/uploads/semanticsegmentation.png)
+
+## Rectangle Detector
+
+We will be building an object detection module for detecting single rectangles in images. We will be training a simple classifier using **Keras** that will be predicting the bounding boxes of the rectangles.
+
+### Importing The Necessary Libraries
+
+We will be using **Numpy** for linear algebra, **Matplotlib** for visualization, **Keras** for building the classifier and **Tensorflow** as the backend of Keras.
