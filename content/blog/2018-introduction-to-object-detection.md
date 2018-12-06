@@ -40,25 +40,4 @@ We will be building an object detection module for detecting single rectangles i
 
 We will be using **Numpy** for linear algebra, **Matplotlib** for visualization, **Scikit-Learn** for splitting the data into training and test set, **Keras** for building the classifier and **Tensorflow** as the backend of Keras.
 
-```import warnings
-# Ignoring unnecessary warnings
-warnings.filterwarnings('ignore')
-
-import numpy as np
-import matplotlib.pyplot as plt
-# For visualizing Bounding Boxes
-from matplotlib.patches import Rectangle
-
-
-import tensorflow as tf
-import keras.backend as K
-from keras.models import Sequential
-from keras.layers import Dense, Activation, Dropout
-from keras.utils.vis_utils import model_to_dot
-from keras.callbacks import Callback
-
-# For visualizing the classifier
-from IPython.display import SVG
-
-# For splitting the Dataset
-from sklearn.model_selection import train_test_split```
+`<script src="https://gist.github.com/soumik12345/1b6e65e817a1e3f89addc1495dd83875.js"></script>`
