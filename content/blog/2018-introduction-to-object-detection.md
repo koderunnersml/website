@@ -1,7 +1,7 @@
 ---
 title: Introduction to Object Detection
 date: 2018-12-06T13:06:02.068Z
-draft: true
+draft: false
 categories: Podcast
 tags:
   - machinelearning
@@ -38,4 +38,6 @@ We will be building an object detection module for detecting single rectangles i
 
 ### Importing The Necessary Libraries
 
-We will be using **Numpy** for linear algebra, **Matplotlib** for visualization, **Keras** for building the classifier and **Tensorflow** as the backend of Keras.
+We will be using **Numpy** for linear algebra, **Matplotlib** for visualization, **Scikit-Learn** for splitting the data into training and test set, **Keras** for building the classifier and **Tensorflow** as the backend of Keras.
+
+<script src="https://gist.github.com/soumik12345/1b6e65e817a1e3f89addc1495dd83875.js"></script>
