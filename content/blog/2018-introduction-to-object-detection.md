@@ -87,8 +87,8 @@ max_obj_size = 8</code><pre>
             width, height = np.random.randint(min_obj_size, max_obj_size, size = 2)
             x = np.random.randint(0, img_size - width)
             y = np.random.randint(0, img_size - height)
-            images\\[i, x : x + width, y : y + height] = 1.0
-            bounding_boxes\\[i, j] = \\[x, y, width, height]
+            images\\\[i, x : x + width, y : y + height] = 1.0
+            bounding_boxes\\\[i, j] = \\\[x, y, width, height]
     return (images, bounding_boxes)</code><pre>
 
 <pre><code>images, bounding_boxes = generate_training_set(n_images, n_objects, img_size, min_obj_size, max_obj_size)
@@ -100,16 +100,14 @@ Bounding Boxes shape: (50000, 1, 4)</code><pre></h4>
 
 <h3>Visualizing Generated Samples</h3>
 <pre><code>def display_image(index):
-    plt.imshow(images\[index].T, cmap = "binary", origin='lower', extent = \[0, img_size, 0, img_size])
-    for box in bounding_boxes\[index]:
-        plt.gca().add_patch(Rectangle((box\[0], box\[1]), box\[2], box\[3], ec = 'r', fc = 'none'))
-    plt.xticks(\[])
-    plt.yticks(\[])
+    plt.imshow(images\\[index].T, cmap = "binary", origin='lower', extent = \\[0, img_size, 0, img_size])
+    for box in bounding_boxes\\[index]:
+        plt.gca().add_patch(Rectangle((box\\[0], box\\[1]), box\\[2], box\\[3], ec = 'r', fc = 'none'))
+    plt.xticks(\\[])
+    plt.yticks(\\[])
     plt.show()
 </code><pre>
 <pre><code>display_image(np.random.randint(0, n_images))</code><pre>
 
 <h4>Output:</h4>
-
-
-![](/uploads/__results___9_0.png)
+<img src="/uploads/__results___9_0.png">
