@@ -15,6 +15,8 @@ type: post
 ---
 ## Image Classification
 
+## 
+
 In Image Classification problems we classify an image to a specific class. The whole image represents one class. We don't want to know exactly where are the object. Usually only one object is presented.
 
 ![Cat](/uploads/cat.3.jpg)
@@ -65,9 +67,49 @@ from IPython.display import SVG
 from sklearn.model_selection import train_test_split
 </code></pre>
 
-#### Output:
-
-<pre><code>Using TensorFlow backend.</code><pre>
-
+#### Output: <pre><code>Using TensorFlow backend.</code><pre>
 
 ### Generating The Dataset
+
+We will be generating 50000 images of height and width 16, where each image will contain an object. Minimum size of an object will be 1 and maximum size will be 8.
+
+<pre><code>n_images = 50000
+n_objects = 1
+img_size = 16
+min_obj_size = 1
+max_obj_size = 8</code><pre>
+
+<pre><code>def generate_training_set(n_images, n_objects, img_size, min_obj_size, max_obj_size):
+    images = np.zeros((n_images, img_size, img_size))
+    bounding_boxes = np.zeros((n_images, n_objects, 4))
+    for i in range(n_images):
+        for j in range(n_objects):
+            width, height = np.random.randint(min_obj_size, max_obj_size, size = 2)
+            x = np.random.randint(0, img_size - width)
+            y = np.random.randint(0, img_size - height)
+            images\\[i, x : x + width, y : y + height] = 1.0
+            bounding_boxes\\[i, j] = \\[x, y, width, height]
+    return (images, bounding_boxes)</code><pre>
+
+<pre><code>images, bounding_boxes = generate_training_set(n_images, n_objects, img_size, min_obj_size, max_obj_size)
+print("Images shape:", images.shape)
+print("Bounding Boxes shape:", bounding_boxes.shape)</code><pre>
+
+<h4>Output: <pre><code>Images shape: (50000, 16, 16)
+Bounding Boxes shape: (50000, 1, 4)</code><pre></h4>
+
+<h3>Visualizing Generated Samples</h3>
+<pre><code>def display_image(index):
+    plt.imshow(images\[index].T, cmap = "binary", origin='lower', extent = \[0, img_size, 0, img_size])
+    for box in bounding_boxes\[index]:
+        plt.gca().add_patch(Rectangle((box\[0], box\[1]), box\[2], box\[3], ec = 'r', fc = 'none'))
+    plt.xticks(\[])
+    plt.yticks(\[])
+    plt.show()
+</code><pre>
+<pre><code>display_image(np.random.randint(0, n_images))</code><pre>
+
+<h4>Output:</h4>
+
+
+![](/uploads/__results___9_0.png)
