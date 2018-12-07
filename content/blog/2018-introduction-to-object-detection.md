@@ -38,7 +38,7 @@ Semantic Segmentation allows us to gather even more information compared to Obje
 
 ## Rectangle Detector
 
-We will be building a very simple object detection module for detecting single rectangles in images. We will be training a simple classifier using **Keras** that will be predicting the bounding boxes of the rectangles.
+We will be building a very simple object detection module for detecting single rectangles in images. We will be training a simple classifier using **Keras** that will be predicting the bounding boxes of the rectangles. The code used in this article can be found here on this [Kaggle Notebook](https://www.kaggle.com/soumikrakshit/object-detection-single-rectangle).
 
 ### Importing The Necessary Libraries
 
@@ -365,8 +365,6 @@ display(x_test, box_pred)
 #### Output:
 
 ![](/uploads/__results___30_0.png)
-
-
 
 This article was contributed by [Soumik Rakshit](https://geekyrakshit.ml/).
 
