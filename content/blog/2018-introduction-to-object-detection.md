@@ -29,7 +29,6 @@ In Image Classification problems we classify an image to a specific class. The w
 
 Sometimes we need more information from an image rather than just a predicted class. Given an image we want to learn the class of the image and where are the class location in the image. We need to detect a class and a region of interest(usually a rectangle) of where that object is. This is especially useful if a single object is placed in a very small area of an image or multiple objects of same or different classes are present in the image.
 
-
 ![](/uploads/multi-labelled-cats.jpeg)
 
 ## Semantic Segmentation
@@ -366,3 +365,9 @@ display(x_test, box_pred)
 #### Output:
 
 ![](/uploads/__results___30_0.png)
+
+
+
+This article was contributed by [Soumik Rakshit](https://geekyrakshit.ml/).
+
+Thank you for reading and stay tuned for subsequent articles :)
