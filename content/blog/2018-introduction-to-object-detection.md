@@ -73,7 +73,9 @@ from sklearn.model_selection import train_test_split
 
 #### Output:
 
-`Using TensorFlow backend.`
+```
+Using TensorFlow backend.
+```
 
 ### Generating the Dataset
 
