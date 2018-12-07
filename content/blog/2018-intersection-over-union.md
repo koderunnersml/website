@@ -40,7 +40,7 @@ In this case, we calculate **IOU** or **Intersection** Over Union for the follow
 
 ## Implementing IOU
 
-The bounding box coordinates are in the form `(x, y, width, height)`. We will first calculate the width and height of the Intersection Box and size of Intersection will be area of the Intersection Box. We can get the Union size by subtracting the Intersection size from total area.
+The bounding box coordinates are in the form `(x, y, width, height)`. We will first calculate the width and height of the Intersection Box and size of Intersection will be area of the Intersection Box. We can get the Union size by subtracting the Intersection size from total area. All the code is part of the following [Kaggle Notebook](https://www.kaggle.com/soumikrakshit/object-detection-single-rectangle).
 
 #### Code:
 ```
@@ -80,3 +80,7 @@ display(x_test, y_test, box_pred)
 
 #### Output:
 ![](/uploads/__results___30_1.png)
+
+This article was contributed by [Soumik Rakshit](https://geekyrakshit.ml)
+
+Thank you for reading and stay tuned for subsequent articles :)
