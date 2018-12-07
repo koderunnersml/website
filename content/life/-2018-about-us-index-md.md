@@ -4,7 +4,9 @@ date: 2018-11-29T06:27:35.304Z
 draft: false
 categories: About
 tags:
-  - machinelearning
+  - aboutus
+  - koderunners
+  - koderunnersml
 author: KoderunnersML
 authorImage: uploads/koderunners.jpg
 image: /uploads/0.jpg
