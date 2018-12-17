@@ -112,5 +112,6 @@ Usually for Semantic Slot Filling and other Sequence Related Tasks, the most pop
 
 For practical purposes, **Gated Recurrent Units or GRU** blocks and **Long Short Term Memory or LSTM** blocks are used in the RNN architecture.
 
-This article was contributed by [Soumik Rakshit](https://geekyrakshit.ml/)
+This article was contributed by [Soumik Rakshit](https://geekyrakshit.ml/).
+
 Stay tuned for subsequent articles :)
