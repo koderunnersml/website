@@ -76,11 +76,11 @@ Are any <BUSES>buses</BUSES> leaving <DESTINATION>for <CITY>Kolkata</CITY></DEST
 ```
 
 Once we have our training data, we have to do some feature engineering, and extract some useful features such as
-- Is the word in uppercase?
-- Is the word present in the name of cities?
-- What are the previous words?
-- What are the next words?
-- What is the previous slots?
+* Is the word in uppercase?
+* Is the word present in the name of cities?
+* What are the previous words?
+* What are the next words?
+* What is the previous slots?
 
 and so on....
 
