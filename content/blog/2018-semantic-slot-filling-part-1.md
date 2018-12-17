@@ -17,7 +17,7 @@ type: post
 ---
 ## Semantic Slot Filling: Part 1
 
-One way of making sense of a piece of text is to tag the words or tokens which carry meaninng to the sentences. In the field of Natural Language Processing, this problem is known as **Semantic Slot Filling**. There are three main approaches:
+One way of making sense of a piece of text is to tag the words or tokens which carry meaning to the sentences. In the field of Natural Language Processing, this problem is known as **Semantic Slot Filling**. There are three main approaches:
 
 1. Rule Based Approaches
 2. Machine Learning Approaches
@@ -33,14 +33,14 @@ This approach consists on **Semantic Slot Filling** techniques using **Regular G
 
 A **Grammar** is defined as a set of production rules which are used to generate strings of a language, which in this case may be a **Regular** or a **Context Free Language**.
 
-In this case we would use a Context Free Grammar(CFG) to do Semantic Slot Filling. Effectlively we can always chose to use Context Free Grammars since they are a superset of Regular Grammar.
+In this case we would use a Context Free Grammar(CFG) to do Semantic Slot Filling. Effectively we can always chose to use Context Free Grammars since they are a super-set of Regular Grammar.
 
 Let us consider the following CFG:
 ```
 S -> SHOW BUSES ORIGIN DESTINATION DATE|...
 SHOW -> show me|i want|can i see|...
 BUSES -> bus|a bus|buses
-ORGIN -> from CITY
+ORIGIN -> from CITY
 DESTINATION -> to CITY
 CITY -> kolkata|bhubaneshwar|Ahmedabad|...
 DATE -> sunday|monday|...|saturday
@@ -101,7 +101,7 @@ predicted_tag = argmax(p(tags|words))
 ```
 
 ### 3. Deep Learning Approach
-The Deep Learning approach is largely similar to the machine learning approach eaxcept in the Deep Learning methodology, features do not need to be manually engineered, rather we feed an encoded sequence of words into a **Neural Network** and the differnt hidden layers of the Neural Network act as feature extractors.
+The Deep Learning approach is largely similar to the machine learning approach except in the Deep Learning methodology, features do not need to be manually engineered, rather we feed an encoded sequence of words into a **Neural Network** and the different hidden layers of the Neural Network act as feature extractors.
 
 Usually for Semantic Slot Filling and other Sequence Related Tasks, the most popular Deep Learning Models are **Recrrent Neural Networks**(RNNs).
 
