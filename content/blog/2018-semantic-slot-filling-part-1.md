@@ -24,6 +24,7 @@ One way of making sense of a piece of text is to tag the words or tokens which c
 3. Deep Learning Approaches
 
 Let us consider the following query text:
+
 > **Show me all the Buses from Kolkata to Bhubanshwar on Friday.**
 
 Given this piece of text, we have to find some slots which may be Destination, City, Date etc. We will see how to fill these slots using the previously mentioned approaches.
