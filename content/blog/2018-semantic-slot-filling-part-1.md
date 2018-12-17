@@ -15,6 +15,8 @@ comments: true
 share: true
 type: post
 ---
+## Semantic Slot Filling: Part 1
+
 One way of making sense of a piece of text is to tag the words or tokens which carry meaninng to the sentences. In the field of Natural Language Processing, this problem is known as **Semantic Slot Filling**. There are three main approaches:
 
 1. Rule Based Approaches
