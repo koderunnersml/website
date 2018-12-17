@@ -67,6 +67,7 @@ on <DATE>Friday</DATE>.
 **Advantage:** : This approach has very high precision.
 
 **Disadvantage:**
+
 1. Someone(usually a linguist) would have to write down the rules manually which is very time consuming.
 2. The recall of this process will not be good because, it would not be practical to write down every possible date.
 
