@@ -1,5 +1,5 @@
 ---
-title: 'Introduction to Genetic Algorithm: Part 1(Intiution)'
+title: 'Genetic Algorithm: Part 1 - Intiution'
 date: 2018-12-20T14:05:49.400Z
 draft: false
 categories: Podcast
