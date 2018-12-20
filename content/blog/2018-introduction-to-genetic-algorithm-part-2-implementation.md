@@ -1,5 +1,5 @@
 ---
-title: 'Introduction to Genetic Algorithm: Part 2(Implementation)'
+title: 'Introduction to Genetic Algorithm: Part 2 - Implementation'
 date: 2018-12-20T15:27:08.533Z
 draft: false
 categories: Podcast
