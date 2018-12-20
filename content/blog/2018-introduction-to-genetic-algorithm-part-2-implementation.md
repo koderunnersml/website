@@ -1,5 +1,5 @@
 ---
-title: 'Introduction to Genetic Algorithm: Part 2 - Implementation'
+title: 'Genetic Algorithm: Part 2 - Implementation'
 date: 2018-12-20T15:27:08.533Z
 draft: false
 categories: Podcast
@@ -197,6 +197,4 @@ The optimized weights for the given inputs are:
 
 
 
-
-
-This marks the end of introduction to Genetic Algorithm. Thank you for reading this article. This article is contributed by [Satvik Tiwari](https://www.linkedin.com/in/satvik-tiwari-1a2955155/). Stay tuned for more Machine Learning stuff....  :)
+Thank you for reading this article. This article is contributed by [Satvik Tiwari](https://www.linkedin.com/in/satvik-tiwari-1a2955155/). Stay tuned for more Machine Learning stuff....  :)
