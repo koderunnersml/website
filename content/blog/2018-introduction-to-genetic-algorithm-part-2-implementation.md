@@ -64,7 +64,7 @@ Everytime we run the code the population will be different because we are using 
 
 Now, we calculate the fitness. In this implementation the fitness function that we will be using is :
 
-![](/uploads/whatsapp-image-2018-12-21-at-02.54.37.jpeg)
+![](/uploads/fitness_function.gif)
 
 where, 
 
