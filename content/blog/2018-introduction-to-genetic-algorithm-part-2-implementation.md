@@ -68,11 +68,11 @@ Now, we calculate the fitness. In this implementation the fitness function that 
 
 where, 
 
-w = weights
+> w = weights
 
-x = inputs
+> x = inputs
 
-n = number of solutions per population                                                                                                                                                                                                                                                   
+> n = number of solutions per population                                                                                                                                                                                                                                                   
 
 **Code:**
 
