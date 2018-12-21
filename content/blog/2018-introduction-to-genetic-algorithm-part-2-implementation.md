@@ -43,7 +43,7 @@ inputs = np.asarray([4,10,-8,0,5,-3])
 solutions_per_pop = 8
 pop_size = (solutions_per_pop, inputs.shape[0] )
 initial_population = np.random.uniform(low = -3.0, high = 3.0, size = pop_size)
-num_generations = 5print('Initial population: \n{}'.format(initial_population))
+num_generations = print('Initial population: \n{}'.format(initial_population))
 ```
 
 **Output:**
