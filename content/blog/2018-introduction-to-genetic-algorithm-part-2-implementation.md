@@ -9,7 +9,7 @@ tags:
   - OptimizationTechniques
 author: KoderunnersML
 authorImage: uploads/koderunners.jpg
-image: /uploads/pic-1.jpg
+image: /uploads/pic2.jpg
 comments: true
 share: true
 type: post
