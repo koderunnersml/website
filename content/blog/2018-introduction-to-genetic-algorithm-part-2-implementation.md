@@ -31,7 +31,8 @@ We first import the necessary libraries.
 ```
 import numpy as np
 import random as rd
-from random import randint  
+from random import randint
+import matplotlib.pyplot as plt
 ```
 
 Now, we create an initial population using _decimal representation. _So our population is basically a set of random numbers. Number of generations is problem specific and so is the solutions per population. For the ease of understanding we are taking 5 generations and 8 solutions per population.
@@ -43,21 +44,30 @@ inputs = np.asarray([4,10,-8,0,5,-3])
 solutions_per_pop = 8
 pop_size = (solutions_per_pop, inputs.shape[0] )
 initial_population = np.random.uniform(low = -3.0, high = 3.0, size = pop_size)
-num_generations = print('Initial population: \n{}'.format(initial_population))
+num_generations = 5
+print('Initial population: \n{}'.format(initial_population))
 ```
 
 **Output:**
 
 ```
 Initial population: 
-[[-1.01245739 -1.56646273  0.98240416  1.56719941 -0.88343664 -2.97975112]
- [-0.26446    -0.63331283  2.01506987  1.55716117 -0.73383902  2.66251002]
- [ 0.51937074 -1.60662555  2.18967848 -0.9790294  -0.33791569 -2.80875267]
- [-0.81239689 -1.18476129  1.12083248  2.58912426  0.70442334 -2.86601968]
- [-1.57231087 -0.43209536 -2.86624978 -0.83843799  1.68509728 -1.52362102]
- [-0.1596207  -1.98807885 -2.06621765  1.7338106  -1.99176258  0.02053455]
- [-1.86821137 -1.938959    2.26166578  1.7462855   0.78947019 -1.58978935]
- [-2.54771976 -2.05911834 -0.92403029 -0.31943213 -1.94437704  2.68513142]]
+[[-1.23750936e+00 -2.83860744e+00 -1.87281287e+00 -1.25845844e+00
+   2.60035782e+00  1.09798606e+00]
+ [ 2.03761194e-01  2.47529274e+00 -1.27236220e+00  1.14533564e-01
+   6.12080724e-02  1.98328747e+00]
+ [-1.78910106e+00  1.53519499e+00  1.34967048e+00 -1.64725500e+00
+   1.48220734e+00  1.97967494e+00]
+ [ 2.83035132e+00  1.00812573e+00 -6.88167700e-01 -5.82980698e-01
+  -9.09212508e-01  2.41073767e-03]
+ [-1.56158682e+00 -3.62801620e-01  7.19112752e-01  1.74010308e+00
+   1.21772034e+00 -2.98911576e+00]
+ [-2.55088801e+00 -1.26526979e+00  2.83741301e+00 -2.50156148e+00
+   4.22334092e-01  2.61314958e+00]
+ [ 1.80357205e+00 -7.26921949e-01 -5.25325371e-01 -2.76054401e+00
+   2.01855757e+00 -1.42300340e+00]
+ [-1.64525139e+00  1.92794230e+00  2.33257718e-01  2.72794462e+00
+   1.25903640e+00  9.88211994e-01]]
 ```
 
 Everytime we run the code the population will be different because we are using random numbers to do so.
@@ -69,16 +79,16 @@ Now, we calculate the fitness. In this implementation the fitness function that 
 where, 
 
 > w = weights
-
+>
 > x = inputs
-
+>
 > n = number of solutions per population                                                                                                                                                                                                                                                   
 
 **Code:**
 
 ```
 def cal_fitness(inputs, population):
-    fitness = np.sum(population*inputs, axis=1)
+    fitness = np.sum(population * inputs, axis=1)
     return fitness
 ```
 
@@ -117,7 +127,7 @@ def crossover(parents, num_offsprings):
         offsprings[i,0:crossover_point] = parents[parent1_index,0:crossover_point]
         offsprings[i,crossover_point:] = parents[parent2_index,crossover_point:]
         i=+1
-    return offsprings    
+    return offsprings
 ```
 
 For mutation, we set mutation rate to a small value so that few individuals got though mutation. For every offspring we generate a random number between 0 and 1. If its less than or equal to the mutation rate then that individual goes through mutation.
@@ -144,11 +154,12 @@ In the function below we first decide how many parents and offsprings will be th
 
 ```
 def optimize(inputs, population, pop_size, num_generations):
-    weights = []
+    weights, fitness_history = [], []
     num_parents = int(pop_size[0]/2)
     num_offsprings = pop_size[0] - num_parents 
     for i in range(num_generations):
         fitness = cal_fitness(inputs, population)
+        fitness_history.append(fitness)
         parents = selection(population, fitness, num_parents)
         offsprings = crossover(parents, num_offsprings)
         mutants = mutation(offsprings)
@@ -159,7 +170,7 @@ def optimize(inputs, population, pop_size, num_generations):
     print('Fitness of the last generation: \n{}\n'.format(fitness_last_gen))
     max_fitness = np.where(fitness_last_gen == np.max(fitness_last_gen))
     weights.append(population[max_fitness[0][0],:])
-    return weights    
+    return weights, fitness_history
 ```
 
 The fittest individual is the required solution i.e., the _weights_ of our equation.
@@ -167,7 +178,7 @@ The fittest individual is the required solution i.e., the _weights_ of our equat
 **Code:**
 
 ```
-weights = optimize(inputs, initial_population, pop_size, num_generations)
+weights, fitness_history = optimize(inputs, initial_population, pop_size, num_generations)
 print('The optimized weights for the given inputs are: \n{}'.format(weights))
 ```
 
@@ -175,23 +186,57 @@ print('The optimized weights for the given inputs are: \n{}'.format(weights))
 
 ```
 Last generation: 
-[[-0.97975558 -0.43209536 -2.86624978 -0.83843799  1.68509728 -1.52362102]
- [-1.57231087 -0.43209536 -2.86624978 -0.83843799  1.68509728 -1.52362102]
- [-1.57231087 -0.43209536 -2.86624978 -0.83843799  1.68509728 -1.52362102]
- [-1.57231087 -0.43209536 -2.86624978 -0.83843799  1.68509728 -1.52362102]
- [-1.57231087 -0.43209536 -2.86624978 -0.83843799  1.68509728 -1.52362102]
- [-1.57231087 -0.43209536 -3.21160968 -0.83843799  1.68509728 -1.52362102]
- [-1.57231087 -0.43209536 -2.86624978 -0.83843799  1.68509728 -1.52362102]
- [-0.81239689 -1.18476129  0.22196107  2.58912426  0.70442334 -2.86601968]]
+[[5.54199171e+257 3.12574039e-085 7.22594635e+159 6.84978751e+180
+  9.00114494e+223 4.34343636e-294]
+ [5.54199171e+257 3.12574039e-085 7.22594635e+159 6.84978751e+180
+  9.00114494e+223 4.34343636e-294]
+ [5.54199171e+257 3.12574039e-085 7.22594635e+159 6.84978751e+180
+  9.00114494e+223 4.34343636e-294]
+ [5.54199171e+257 3.12574039e-085 7.22594635e+159 6.84978751e+180
+  9.00114494e+223 4.34343636e-294]
+ [5.54199171e+257 3.12574039e-085 7.22594635e+159 6.84978751e+180
+  9.00114494e+223 4.34343636e-294]
+ [5.54199171e+257 3.12574039e-085 7.22594635e+159 6.84978751e+180
+  9.00114494e+223 4.34343636e-294]
+ [5.54199171e+257 3.12574039e-085 7.22594635e+159 6.84978751e+180
+  9.00114494e+223 4.34343636e-294]
+ [5.54199171e+257 3.12574039e-085 7.22594635e+159 6.84978751e+180
+  9.00114494e+223 4.34343636e-294]]
 
 Fitness of the last generation: 
-[ 115.32727417  112.95705303  112.95705303  112.95705303  112.95705303
-  119.17353134  112.95705303   17.68249277]
+[2.21679669e+258 2.21679669e+258 2.21679669e+258 2.21679669e+258
+ 2.21679669e+258 2.21679669e+258 2.21679669e+258 2.21679669e+258]
 
 The optimized weights for the given inputs are: 
-[array([-1.57231087, -0.43209536, -3.21160968, -0.83843799,  1.68509728,
-       -1.52362102])]
+[array([5.54199171e+257, 3.12574039e-085, 7.22594635e+159, 6.84978751e+180,
+       9.00114494e+223, 4.34343636e-294])]
 ```
+
+Time to see how fitness varies with every generation.
+
+**Code:**
+
+```
+fitness_history_mean = [np.mean(fitness) for fitness in fitness_history]
+fitness_history_max = [np.max(fitness) for fitness in fitness_history]
+plt.plot(list(range(num_generations)), fitness_history_mean, label = 'Mean Fitness')
+plt.plot(list(range(num_generations)), fitness_history_max, label = 'Max Fitness')
+plt.legend()
+plt.title('Fitness through the generations')
+plt.xlabel('Generations')
+plt.ylabel('Fitness')
+plt.show()
+```
+
+**Visualization:**
+
+![](/uploads/graph.png)
+
+
+
+
+
+
 
 
 
