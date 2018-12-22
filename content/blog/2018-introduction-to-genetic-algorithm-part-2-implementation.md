@@ -14,7 +14,7 @@ comments: true
 share: true
 type: post
 ---
-In my previous article, we discussed about Genetic Algorithm and its workflow. Now its time for its implementation.
+In Part 1 of Genetic Algorithm, we discussed about Genetic Algorithm and its workflow. Now its time for its implementation.
 
 Lets consider an equation:
 
