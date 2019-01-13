@@ -21,6 +21,8 @@ This time we will solve a classical problem using GA. The problem we wil be solv
 
 # Problem Statement
 
+![](/uploads/thief-2.jpg)
+
 A thief enters a shop carrying knapsack(bag) which can carry 35 kgs of weight. The shop has 10 items, each with a specific weight and price. Now, the thief's dilemma is to make such a selection of items that it maximizes the value(i.e. total  price) without exceeding the knapsack weight. We have to help the thief to make the selection. 
 
 # Solution
