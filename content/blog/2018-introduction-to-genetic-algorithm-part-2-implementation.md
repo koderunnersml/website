@@ -106,7 +106,7 @@ def selection(population, fitness, num_parents):
     return parents
 ```
 
-Now, in crossover we perform _one point crossover._ We declare a _crossover point_ such that it is a middle point and a _crossover rate_ which is set to high a high point. For every two individuals a random number between 0 and 1 is generated. If the number is less than or equal to crossover rate then, the individuals are mated. For every two individual one offspring is created.
+Now, in crossover we perform _one point crossover._ We declare a _crossover point_ such that it is a middle point and a _crossover rate_ which is set to a high value. For every two individuals a random number between 0 and 1 is generated. If the number is less than or equal to crossover rate then, the individuals are mated. For every two individual one offspring is created.
 
 **Code:**
 
@@ -231,15 +231,5 @@ plt.show()
 **Visualization:**
 
 ![](/uploads/graph.png)
-
-
-
-
-
-
-
-
-
-
 
 Thank you for reading this article. This article is contributed by [Satvik Tiwari](https://www.linkedin.com/in/satvik-tiwari-1a2955155/). Stay tuned for more Machine Learning stuff....  :)
