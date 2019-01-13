@@ -294,3 +294,11 @@ print(np.asarray(fitness_history).shape)
 **Output:**
 
 ![](/uploads/knap-sack.png)
+
+
+
+
+
+
+
+Thank you for reading this article. This article is contributed by [Kivtas](https://www.linkedin.com/in/satvik-tiwari-1a2955155/). Stay tuned for more Machine Learning stuff..... :)
