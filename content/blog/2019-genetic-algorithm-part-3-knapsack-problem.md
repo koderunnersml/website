@@ -25,7 +25,11 @@ A thief enters a shop carrying knapsack(bag) which can carry 35 kgs of weight. T
 
 # Solution
 
-We will be using GA to solve this problem. We will follow the same flowchart as we discussed in my first article. So, here we go....
+We will be using GA to solve this problem. We will follow the same flowchart as we discussed in my first article.
+
+![](/uploads/fig-2.jpg)
+
+ So, here we go....
 
 We begin with randomly initializing the list of items.
 
@@ -113,13 +117,14 @@ The fitness function that we will be using for this problem is as follows:
 
 where,   
 
-         n = chromosome length
-         c_i = ith gene
-         v_i = ith value
-         w_i = ith weigth 
-         kw = knapsack weight
-             
-    
+```
+     n = chromosome length
+     c_i = ith gene
+     v_i = ith value
+     w_i = ith weigth 
+     kw = knapsack weight
+         
+```
 
 **Code:**
 
