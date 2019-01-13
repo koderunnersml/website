@@ -109,9 +109,17 @@ The fitness function that we will be using for this problem is as follows:
 
 ![](/uploads/codecogseqn-5-.gif)
 
- 
-
 ![](/uploads/codecogseqn-7-.gif)
+
+where,   
+
+         n = chromosome length
+         c_i = ith gene
+         v_i = ith value
+         w_i = ith weigth 
+         kw = knapsack weight
+             
+    
 
 **Code:**
 
