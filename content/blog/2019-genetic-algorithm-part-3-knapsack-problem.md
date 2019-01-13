@@ -10,7 +10,7 @@ tags:
   - Genetic Algorithms
 author: KoderunnersML
 authorImage: uploads/koderunners.jpg
-image: /uploads/geneticsandgenomics_main.jpg
+image: /uploads/thinkstockphotos-687644470.jpg
 comments: true
 share: true
 type: post
