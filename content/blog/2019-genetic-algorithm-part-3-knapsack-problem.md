@@ -1,7 +1,7 @@
 ---
 title: 'Genetic Algorithm: Part 3 - Knapsack Problem'
 date: 2019-01-13T11:51:36.636Z
-draft: true
+draft: false
 categories: Podcast
 tags:
   - Machine Learning
