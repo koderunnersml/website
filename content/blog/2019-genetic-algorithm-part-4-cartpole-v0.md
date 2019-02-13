@@ -1,7 +1,7 @@
 ---
 title: 'Genetic Algorithm: Part 4 - CartPole-v0'
 date: 2019-02-13T18:09:45.011Z
-draft: true
+draft: false
 categories: Podcast
 tags:
   - MachineLearning
