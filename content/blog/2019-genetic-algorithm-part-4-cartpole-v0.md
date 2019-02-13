@@ -315,6 +315,8 @@ print('Average Score Achieved:',sum(scores)/len(scores))env.close()
 
 **Output:**
 
+[Click here](https://drive.google.com/open?id=1UeTM-pHx2EKkQjz9dIWeUj9dAQ0xfyp0) to see the visual output of the game.
+
 ```
 Required Score: 50
 Average Score Achieved: 140.2
