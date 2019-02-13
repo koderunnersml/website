@@ -10,11 +10,12 @@ tags:
   - GeneticAlgorithm
 author: KoderunnersML
 authorImage: uploads/koderunners.jpg
+image: /uploads/g4.jpeg
 comments: true
 share: true
 type: post
 ---
-<https://www.linkedin.com/in/satvik-tiwari-1a2955155/>So far, we have learned the [basics](https://koderunners.ml/blog/2018-introduction-to-genetic-algorithm-part-2-implementation/) of Genetic Algorithm(GA) and solved a [classical problem using GA](https://koderunners.ml/blog/2019-genetic-algorithm-part-3-knapsack-problem/). GA can be applied to a variety of [real world problems](https://www.brainz.org/15-real-world-applications-genetic-algorithms/).
+So far, we have learned the [basics](https://koderunners.ml/blog/2018-introduction-to-genetic-algorithm-part-2-implementation/) of Genetic Algorithm(GA) and solved a [classical problem using GA](https://koderunners.ml/blog/2019-genetic-algorithm-part-3-knapsack-problem/). GA can be applied to a variety of [real world problems](https://www.brainz.org/15-real-world-applications-genetic-algorithms/).
 
 So, today we will use Open AI Gym environment to simulate a simple game known as CartPole-v0 and then we will use GA to automate the playing of the game. Sounds fun..... 
 
@@ -35,7 +36,7 @@ As usual, we begin with importing libraries and making necessary initializations
 ```
 import gym
 import random
-import numpy as np
+import numpy as npimport matplotlib.pyplot as plt
 from random import randint
 from statistics import mean, median
 from collections import Counter
@@ -242,15 +243,53 @@ def GA_model_predict(test_data, weights):
     return pred[0][0]
 ```
 
+```
+training_data = create_data()
+weights = GA_model(training_data)
+print('Weights: {}'.format(weights))
+weights = np.asarray(weights)
+```
+
+**Output:**
+
+```
+Initial Population:
+[[ 0.67999273  1.20045524 -0.31810563 -1.14804361]
+ [-1.51475165 -1.42250336  0.03428274  0.63371852]
+ [-0.8970108   1.03936397  1.84329259  1.72682724]
+ [ 1.94204407 -0.77717282  0.14019162 -1.1903907 ]
+ [ 0.41835458 -1.22852332  0.9296547  -1.12009693]
+ [-0.65292285 -1.40827788  1.55964313 -0.23029554]
+ [-1.44485637  0.02821767  0.48371509 -0.67509993]
+ [ 1.51550571 -1.66566025  0.17737747 -1.76249427]]
+Weights: [array([ 7.53967288, 14.12987549, -2.29013767, -8.39335431])]
+```
+
+Lets visualize the fitness growth with respect to generations.
+
+**Code:**
+
+```
+fitness_history_mean = [np.mean(fitness) for fitness in fitness_history]
+fitness_history_max = [np.max(fitness) for fitness in fitness_history]
+plt.plot(list(range(num_generations)), fitness_history_mean, label = 'Mean Fitness')
+plt.plot(list(range(num_generations)), fitness_history_max, label = 'Max Fitness')
+plt.legend()
+plt.title('Fitness through the generations')
+plt.xlabel('Generations')
+plt.ylabel('Fitness')
+plt.show()
+```
+
+**Output:**
+
+![](/uploads/openai1.png)
+
 So everything is set and good to go. We will feed our model with training data and then run the game environment 10 times. Initially, we will decide a random move and based on that our model will play the game.
 
 **Code:**
 
 ```
-weights = GA_model(training_data)
-print('Weights: {}'.format(weights))
-weights = np.asarray(weights)
-
 scores, choices = [], []
 for each_game in range(10):
     score = 0
@@ -270,8 +309,15 @@ for each_game in range(10):
         if done:
             break
     scores.append(score)        
-print('Required Score',str(score_requirement))    
-print('Average Score:',sum(scores)/len(scores))
+print('Required Score:',str(score_requirement))    
+print('Average Score Achieved:',sum(scores)/len(scores))env.close()
+```
+
+**Output:**
+
+```
+Required Score: 50
+Average Score Achieved: 140.2
 ```
 
 Note that everytime you run the code, its not necessary that you get a good score. But if you combine this model with some other algorithm you can make the model more robust.
