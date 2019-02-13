@@ -15,9 +15,9 @@ comments: true
 share: true
 type: post
 ---
-Previously, we discussed about Genetic Algorithm(GA) and its working and also saw its simple implementation. 
+Previously, we discussed about [Genetic Algorithm(GA)](https://koderunners.ml/blog/2018-introduction-to-genetic-algorithm-part-1-intiution/) and its working and also saw its simple [implementation](https://koderunners.ml/blog/2018-introduction-to-genetic-algorithm-part-2-implementation/). 
 
-This time we will solve a classical problem using GA. The problem we wil be solving is Knapsack Problem.
+This time we will solve a classical problem using GA. The problem we will be solving is Knapsack Problem.
 
 # Problem Statement
 
@@ -297,10 +297,4 @@ print(np.asarray(fitness_history).shape)
 
 ![](/uploads/knap-sack.png)
 
-
-
-
-
-
-
-Thank you for reading this article. This article is contributed by [Kivtas](https://www.linkedin.com/in/satvik-tiwari-1a2955155/). Stay tuned for more Machine Learning stuff..... :)
+Thank you for reading this article. This article is contributed by [Satvik Tiwari](https://www.linkedin.com/in/satvik-tiwari-1a2955155/). Stay tuned for more Machine Learning stuff..... :)
