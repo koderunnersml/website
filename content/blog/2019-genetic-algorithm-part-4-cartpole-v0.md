@@ -130,9 +130,9 @@ The fitness function that we will be using is :
 
 where,
 
-\    w = weights
+  w = weights
 
-\    x = observations
+  x = observations
 
 **Code:**
 
