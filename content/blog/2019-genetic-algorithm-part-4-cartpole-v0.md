@@ -315,7 +315,10 @@ print('Average Score Achieved:',sum(scores)/len(scores))env.close()
 
 **Output:**
 
-[**_Click here_**](https://drive.google.com/open?id=1UeTM-pHx2EKkQjz9dIWeUj9dAQ0xfyp0) to see the visual output of the game.
+<video width="320" height="240" controls>
+  <source src="/uploads/cartpole_v0_output.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
 
 ```
 Required Score: 50
