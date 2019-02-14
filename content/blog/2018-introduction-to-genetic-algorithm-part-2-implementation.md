@@ -7,6 +7,7 @@ tags:
   - MachineLearning
   - GeneticAlgorithmImplementation
   - OptimizationTechniques
+  - geneticalgorithm
 author: KoderunnersML
 authorImage: uploads/koderunners.jpg
 image: /uploads/pic2.jpg
