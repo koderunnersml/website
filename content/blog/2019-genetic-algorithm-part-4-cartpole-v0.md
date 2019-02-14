@@ -315,7 +315,7 @@ print('Average Score Achieved:',sum(scores)/len(scores))env.close()
 
 **Output:**
 
-<video width="320" height="240" controls>
+<video controls>
   <source src="/uploads/cartpole_v0_output.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
