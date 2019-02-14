@@ -8,6 +8,7 @@ tags:
   - Knapsack Problem
   - Optimization Techniques
   - Genetic Algorithms
+  - geneticalgorithm
 author: KoderunnersML
 authorImage: uploads/koderunners.jpg
 image: /uploads/thinkstockphotos-687644470.jpg
